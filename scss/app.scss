@@ -1,0 +1,533 @@
+
+// paleta de material para proyecto
+$primary-color-dark:   #F57C00 !default;
+$primary-color:        #FF9800 !default;
+$primary-color-light:  #FFE0B2 !default;
+$primary-color-text:   #212121 !default;
+$accent-color:         #FF5722 !default;
+$primary-text-color:   #212121 !default;
+$secondary-text-color: #757575 !default;
+$divider-color:        #BDBDBD !default;
+
+
+// colores generales
+$background-color:     #E9E9E9;
+$black-color:          #4A4A4A;
+$white-color:          #FFFFFF;
+$gray-color:           #fafafa;
+
+
+@import "node_modules/materialize-css/sass/materialize.scss";
+@import "node_modules/materialize-clockpicker/dist/css/materialize.clockpicker";
+
+body {
+  background: 			   $background-color;
+  color: 				       #125688;
+  //font-family: 			   Montserrat;
+}
+
+#main-container{
+  height :             100%;
+}
+.page-footer {
+  padding-top: 				 0px;
+  height :             60px;
+}
+#titleNavBar {
+  font-size:				   24px;
+}
+i.material-icons {
+    color: white;
+}
+
+ul:not(.browser-default) {
+  padding-left:        5px;
+  padding-top:         10px;
+  list-style-type:     none;
+}
+.btn, .btn-large {
+	background: 			   $primary-color;
+	height:					     56px;
+	width: 					     100% ;
+  text-align:          center;
+  border-radius:       40px;
+}
+
+p{
+  text-align:          justify;
+  color:               $primary-color-text;
+  font-size:           24px;
+}
+.titulo,.respCuestionario, .altCuestionario, .pregCuestionario, .notaCuestionario, td,#tableResultados #resultadosFormato, thead, h6,.pFicha, .ptituloFicha, .card-content{
+  color:               $primary-color-text;
+}
+.pFicha{
+  opacity:              0.85;
+}
+.titulo,.notaCuestionario {
+  padding:             0px;
+  margin:              0px;
+}
+
+form {
+    padding: 20px;
+    margin: 20px;
+}
+#recuperarEmailColB{
+    padding-top: 20px;
+}
+
+#btnLogin{
+  margin-bottom:       40px;
+  margin-top:          20px; 
+}
+#btnEnviar{
+  margin-bottom:       40px;
+  margin-top:          15px; 
+}
+
+.btn:hover,.btn:focus {
+	background: 			   $primary-color-dark;
+}
+
+[type="checkbox"]:checked + label:before {
+    top: -4px;
+    left: -5px;
+    width: 12px;
+    height: 22px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid $primary-color;
+    border-bottom: 2px solid $primary-color;
+    -ms-transform: rotate(40deg);
+    transform: rotate(40deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+}
+
+
+h1 {
+  color:               $black-color;
+  font-size:           72px;
+  text-align:          center;
+  height:              40vh;
+  line-height:         40vh;
+  margin-top:          0px;
+  margin-bottom:       0px;
+}
+#forgetPassword, #btnRegistro {
+  padding-top:           20px;
+  text-align:          center;
+  color:               $black-color;
+  font-size:           16px;
+
+}
+label {
+    padding-left: 20px;
+}
+
+span.character-counter {
+    color: $black-color;
+}
+
+textarea.materialize-textarea:focus:not([readonly]){
+  border-bottom: 1px solid $primary-color;
+  box-shadow: 0 1px 0 0 $primary-color-dark;
+}
+.picker__date-display,.picker__day--selected, .picker__day--selected:hover, .picker--focused , .picker__day.picker__day--infocus.picker__day--selected.picker__day--highlighted, 
+.picker__day.picker__day--infocus.picker__day--today.picker__day--highlighted , .picker__nav--next:hover, .picker__nav--prev:hover
+ {
+    background-color: $primary-color;
+}
+button.btn-flat.picker__today, button.btn-flat.picker__close {
+    color: $primary-color;
+} 
+.picker__day.picker__day--infocus.picker__day--today.picker__day--highlighted{
+  color :  $white-color;
+} 
+
+.picker__weekday-display{
+    background-color: $primary-color-dark;
+} 
+.picker__day.picker__day--infocus.picker__day--today{
+  color :  $primary-color-dark;
+}
+
+input[type=text],input[type=password]{
+  background-color:    #fafafa;
+  border-radius:       40px;
+  border:              1px solid #9e9e9e;
+  width:               100% ;
+  height:              56px;
+  text-align:          center;
+  color:               $primary-color-text;
+}
+
+
+input[type=text].valid, input[type=text]:focus.valid,input[type=text]:focus, input[type=password].valid, input[type=password]:focus.valid {
+  border-bottom:     0px solid $primary-color-dark;
+  box-shadow:        0 0px 0 0 $primary-color-dark;
+}
+#usernameCol, #passwordCol {
+  padding:             0px;
+  margin-top:          0px;
+}
+
+input#timepicker {
+  border-radius: 0px;
+  border: 0px solid #9e9e9e;
+}
+
+.page-footer .footer-copyright {
+  font-weight:         300;
+  height:              100%;
+}
+.row {
+  margin-bottom:       0px;
+}
+#containerPassword{
+      padding-bottom: 20px;
+}
+#containerPassword,#containerResultados,#containerFiltros,#containerPerfilesO2,#containerVerCuestionario{
+  background-color:    $gray-color;
+}
+#containerPasswordContent,#containerCuestionarioContent,#containerVerCuestionarioContent,#containerHomeContent,#containerFichaMedicaContent,#containerHistoriaIqContent{
+  padding-top:          20px;
+  padding-bottom:       20px;
+}
+#containerBusqueda{
+  background-color:     transparent;
+}
+.valign-wrapper {
+  display:              -ms-flexbox;
+  display:              flex;
+  -ms-flex-align:       center;
+  align-items:          center;
+  width:                100%;
+  height:               100%;
+  left:                 20%;
+  top:                  50px;
+}
+h5,p {
+  padding-left:         20px;
+  padding-right:        20px;
+  padding-top:          20px;
+  margin-left:          20px;
+  margin-right:         20px;
+}
+#recuperarEmailCol {
+  padding-left:         0px;
+  margin-right:         0px;
+}
+
+#textTareaCol{
+  padding-left:         40px;
+  padding-right:        40px;
+}
+.pagination {
+  text-align:           right;
+}
+#resultadosFormato,#filtros {
+  padding:              20px;
+}
+.select-wrapper input.select-dropdown {
+  border-bottom:        0px solid #9e9e9e;
+   
+}
+.select-wrapper span.caret {
+  right:                20px;
+}
+.btn-floating.btn-large i {
+  background:           $primary-color;
+}
+#busqueda,#filtros,#resultados{
+  padding-top:          20px;
+  padding-right:        20px;
+}
+#colResultados,#colFiltros,#colBusqueda , #colPerfilesO2{
+  padding-bottom:       20px;
+}
+#creaNota,#textareaCo,#tableCuestionarios{
+  padding:              20px 20px 20px 20px;
+}
+#tableCuestionarios{
+  padding:              40px 40px 40px 40px;
+}
+#modalParrafo{
+  margin:               0px 0px 0px 0px;
+  text-align:           justify;
+}
+#modalParrafo,#modalTitulo{
+   color:               $black-color;
+}
+.modalAceptar{
+  color:                $white-color;
+  background:           $primary-color;
+  border-radius:        20px;
+}
+
+#containerPasswordContent,#containerLogin,#containerCuestionarioContent,#containerHistoriaIqContent{
+    height:             90vh;
+}
+
+.pFicha {
+  font-size:          14px;
+}
+.tituloFicha {
+  font-size:          18px;
+}
+#tituloCrearNota{
+  padding:             20px;
+}
+#tituloRestablecer {
+  padding: 20px;
+  margin: 20px;
+}
+.material-icons {
+    color: $primary-color;
+}
+#perfilO2FechaPicker,#perfilNombre,#perfilDescripcion{
+  border-radius: 0px; 
+  border: 0px solid #9e9e9e; 
+}
+/* input text colors */
+/* label color */
+.input-field label {
+ color: $black-color;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+ color: $black-color;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+ border-bottom: 1px solid $black-color;
+ box-shadow: 0 1px 0 0 $black-color;
+}
+/* valid color */
+.input-field input[type=text].valid {
+ border-bottom: 1px solid $black-color;
+ box-shadow: 0 1px 0 0 $black-color;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+ border-bottom: 1px solid $black-color;
+ box-shadow: 0 1px 0 0 $black-color;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+ color: $black-color;
+}
+
+input[type=password]:focus:not([readonly]){
+ border-bottom: 1px solid $black-color;
+ box-shadow: 0 1px 0 0 $black-color;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+    color: $primary-color;
+}
+
+#passwordRegistro, #user_nameRegistro, #emailRegistro, #user_nameFullRegistro{
+  background-color: transparent; 
+  border-radius: 0px; 
+  border: 0px solid #9e9e9e;
+  text-align: center; 
+}
+#usernameCol, #passwordCol{
+  text-align: left; 
+}
+
+
+#passwordRegistro:focus + label , #emailRegistro:focus + label{
+  color: $black-color;
+}
+#emailRegistro:focus , #passwordRegistro:focus {
+    border-bottom: 1px solid $black-color;
+}
+
+/* valid color */
+#emailRegistro.valid {
+ border-bottom: 1px solid $black-color;
+ box-shadow: 0 1px 0 0 $black-color;
+}
+/* invalid color */
+#emailRegistro.invalid {
+ border-bottom: 1px solid $black-color;
+ box-shadow: 0 1px 0 0 $black-color;
+}
+
+input#emailRegistro {
+ color: $black-color;
+}
+
+ul:not(.browser-default) {
+    /* padding-left: 5px; */
+    /* padding-top: 10px; */
+    list-style-type: none;
+}
+
+.side-nav .userView {
+    height: 300px;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul#slide-out {
+    padding: 0px;
+}
+
+img.circle {
+    padding: 10px;
+    margin-left: 95px;
+}
+.side-nav .userView .circle {
+    height: 100px;
+    width: 100px;
+}
+.white-text {
+    color: #f5f5f5 !important;
+    background: rgba(0, 0, 0, 0.26);
+    padding: 10px 0px 0px 10px;
+}
+
+
+[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:after {
+    background-color: $primary-color;
+}
+[type="radio"]:checked + label:after, [type="radio"].with-gap:checked + label:before, [type="radio"].with-gap:checked + label:after {
+    border: 0px solid #26a69a;
+}
+
+img#btnExit {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    margin-left: 240px;
+}
+
+div#chart_div1, div#chart_div2, div#chart_div3 {
+    /* width: auto; */
+    padding: 20px;
+}
+#btnBack {
+  transform: rotate(-180deg);
+  padding-top: 10px;
+}
+
+@media #{$small-and-down} {
+  h1 {
+    font-size:          56px;
+    height:             30vh;
+    line-height:        30vh;
+  }
+  input[type=text],input[type=password]{
+    background-color:   #fafafa;
+    border-radius:      40px;
+    border:             1px solid #9e9e9e;
+    width:              100% ;
+    height:             50px;
+    text-align:         center;
+    color:              $primary-color-text;
+  }
+  #btnLogin {
+    margin-bottom:      20px; 
+  }
+ 
+  .btn-floating.btn-large {
+    width:              100%;
+    height:             50px;
+  }
+}
+@media (min-width: 320px) and (max-width: 414px) {
+  #recuperarEmail {
+    content:            "E-mail";
+  }
+  #titleNavBar {
+    font-size:          14px;
+    content:            "Contraseña";
+  }
+  h5 {
+    font-size:          14px;
+  }
+  h4 {
+    font-size:          18px;
+  }
+  h6 {
+    font-size:          12px;
+  }
+  #tableCol {
+    font-size: 14px;
+  }
+  #colResultados,#colFiltros, #colBusqueda, #colPerfilesO2  {
+    padding-left: 0px;
+    padding-right: 0px;
+  } 
+}
+
+a#btnUpdateHistorianIqDoctor {
+    margin-top: 20px;
+}
+
+
+@media (min-width: 320px) and (max-width: 514px) {
+  .pFicha {
+  font-size:          14px;
+  }
+  .tituloFicha {
+    font-size:          16px;
+  }
+}
+@media (min-width: 992px) and (max-width: 645px) {
+  .pFicha {
+  font-size:          14px;
+  }
+  .tituloFicha {
+    font-size:          16px;
+  }
+}
+@media #{$medium-and-up} {
+  // styles for medium screens and larger
+}
+@media #{$medium-and-down} {
+  // styles for medium screens and down
+}
+@media #{$large-and-up} {
+  // styles for large screens and up
+}
+
+
+.side-nav li > a {
+    color: $white-color;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 32px;
+}
+
+ul#slide-out {
+    background-color: $primary-color-dark;
+}
+.radioButonItems {
+    padding: 0px;
+    margin: 0px;   
+}
+#itemMenuTitulo {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#itemMenuTituloLabel {
+  font-size:    24px;
+}
+#itemMenuList {
+  padding-left: 10px;
+}
+
+.side-nav .userView .circle {
+    height: 100px;
+    width: 100px;
+}
