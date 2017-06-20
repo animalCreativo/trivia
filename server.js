@@ -1,5 +1,6 @@
 var express = require('express'); // se usa para levantar un server
 var app = express();
+var app2= app;
 
 app.set('view engine','pug');     //maneja las vistas en view
 
