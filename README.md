@@ -31,5 +31,10 @@ Luego cancelar el proceso y levantar el servicio con el comando
 ```
 $ npm start
 ```
-## License
-Spring is released under the MIT license. See LICENSE for details.
+
+## Ramas
+Existen dos ramas del proyecto:
+```
+1: Rama Master (Rama con el perfil doctor)
+2: Rama 2 (Rama con el perfil doctor, y perfiles propuestos admin y tabla dinámica)
+```
