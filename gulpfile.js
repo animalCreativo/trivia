@@ -59,12 +59,5 @@ gulp.task('watch',function(){
   return compile(true);
 });
 
-gulp.task('postinstall',function(){
-  gulp
-  .src('node_modules/materialize-css/js/date_picker/picker.js')
-  .pipe(gulp.dest('node_modules/materialize-css/bin'));
-});
- 
-
 gulp.task('default',['styles','assets','build']);
 

@@ -1,33 +1,30 @@
 var yo = require('yo-yo');    
 
 var login= yo`
-    <div id ="containerLogin" class="container">
-      <div class="row">
-        <h1>OXYPLUS</h1>
-        <div class="row center-align">
-          <form class="col s12">
-            <div class="row">
-              <div id = "usernameCol" class="input-field col s10  m8 l6 offset-s1 offset-m2 offset-l3">
-               <input value="Usuario" id="user_name" type="text" class="validate z-depth-2">
-              </div>
-            </div>
-            <div class="row">
-              <div id = "passwordCol" class="input-field col s10  m8 l6  offset-s1 offset-m2 offset-l3">
-                <input value="*********"id="password" type="password" class="validate z-depth-2">
-              </div>
-            </div>
-            <div class="row">
-              <div>
-                <a id="btnLogin" class="waves-effect waves-light btn-large col s10  m8 l6  offset-s1 offset-m2 offset-l3 z-depth-4"  >Entrar</a>
-              </div>
-            </div>
-          </form>
+    <div class="row " style="height: 100%;">
+        <div class="row align-self-middle" style="margin-top:-220px"> 
+          <div class="columns small-12  imgContain text-center " >     
+               <img  width="185px" height="240px" src="logo.svg"   /> 
+               <h5 class="textTrivia text-center" style=" line-height: 1.2; padding-bottom: 20px;">Trivia</h5>  
+          </div> 
+          <div class="columns small-10 small-offset-1 text-center ">
+              <br>
+              <h5 class="textLogin1 text-center" style=" line-height: 1.2; padding-bottom: 20px;">Ingresa tus datos y participa</h5>
+              <h5 class="textLogin2 text-center" style=" line-height: 1.2; padding-bottom: 20px;">¡Premios sorpresa te esperan!</h5>
+          </div> 
+          <div class="columns small-6 small-offset-3  text-center"  style="height:80px; margin-bottom:40px;">  
+             <input type="text" id="name" class="middle-label" placeholder="Nombre" style="height:100%;">
+      
+          </div> 
+          <div class="columns small-6 small-offset-3 text-center" style="height:80px;margin-bottom:40px;" >     
+            
+             <input type="text" id="email" class="middle-label" placeholder="Email" style="height:100%;">
+          </div> 
+          <div class="columns small-12 text-center" >   
+                <button id="btnBegin" type="button" class="buttonBegin button " style="width:40vw;" ><span>Comenzar</span></button>  
+          </div>   
         </div>
-        <a  id="btnRegistro" class="col s12"  >Registrar</a>
-        <a  id="forgetPassword" class="col s12"  >Recuperar Contraseña ?</a>
-        <ul id="slide-out" class="side-nav">
-      </div>
-    </div> 
+    </div>
 `;
 
 module.exports = login;

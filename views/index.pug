@@ -2,7 +2,6 @@ doctype html
 html.no-js(lang='en', dir='ltr')
   head
     link(rel='stylesheet', type='text/css', href='app.css')
-    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     link(rel='apple-touch-icon', sizes='57x57', href='/apple-icon-57x57.png')
     link(rel='apple-touch-icon', sizes='60x60', href='/apple-icon-60x60.png')
     link(rel='apple-touch-icon', sizes='72x72', href='/apple-icon-72x72.png')
@@ -18,25 +17,24 @@ html.no-js(lang='en', dir='ltr')
     link(rel='icon', type='image/png', sizes='16x16', href='/favicon-16x16.png')
     link(rel='manifest', href='/manifest.json')
     meta(name='msapplication-TileColor', content='#ffffff')
-    meta(name='msapplication-TileImage', content='/ms-icon-144x144.png')
+    meta(name='msapplication-TileImage', content='icons/icon/ms-icon-144x144.png')
     meta(name='theme-color', content='#ffffff')
     meta(charset='utf-8')
     meta(http-equiv='x-ua-compatible', content='ie=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title=title
+    link(rel='stylesheet', href='css/foundation-flex.css')
+    link(rel='stylesheet', href='app.css')
+   
   body
-    header#header-container
-    section#main-container
-    footer.page-footer
-      .footer-copyright
-        .container
-          | © 2017 Quintum
-          a.grey-text.text-lighten-4.right(href='http://www.quintun.com/') WebSite
-
-    script(type='text/javascript', src='jquery-2.1.1.js')
-    script(type='text/javascript', src='materialize.js')
+    div#main-container
+    script(type='text/javascript', src='/vendor/jquery.js')
+    script(type='text/javascript', src='/vendor/what-input.js')
+    script(type='text/javascript', src='/vendor/foundation.js')
+    script(type='text/javascript', src='/vendor/foundation.interchange.js')
     script(type='text/javascript', src='app.js')
-    script(type='text/javascript', src='https://www.gstatic.com/charts/loader.js')
+
+   
    
 
   
