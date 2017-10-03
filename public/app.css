@@ -72,16 +72,25 @@ button.button {
   font-size: 50px;
   height: 87px;
   padding-bottom: 0px;
-  padding-top: 0px; }
+  padding-top: 0px;
+  height: auto;
+  min-height: 120px;
+  padding: 20px;
+  min-height: 200px; }
 
 .buttonTrue {
   border-radius: 40px; }
+
+.buttonHope {
+  height: auto;
+  padding: 20px; }
 
 .button:hover, .button:focus {
   background-color: #7AADAD; }
 
 button.button {
   color: black;
+  min-width: 400px;
   font-size: 42px; }
 
 .button span {
@@ -159,6 +168,21 @@ input.middle-label {
   color: black;
   font-family: AzoSans-MediumItalic;
   font-size: 56px; }
+
+button#btnBegin {
+  height: auto;
+  min-height: 10px; }
+
+button#q1btn1, button#q1btn2, button#q1btn3, button#btnBuscar {
+  height: auto;
+  min-height: 10px; }
+
+button#btnBuscar:hover, button#btnBuscar:focus {
+  background-color: red; }
+
+.buttonBegin span {
+  text-align: center;
+  padding-right: 0px; }
 
 /* Small only */
 /* Small only */

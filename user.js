@@ -1,11 +1,19 @@
 var mysql = require('mysql');
 
-connection = mysql.createConnection({
+/*connection = mysql.createConnection({
 	host: 'localhost',
 	user: 'pancho',
 	password: 'killua',
 	database: 'trivia'	
+});*/
+
+connection = mysql.createConnection({
+	host: 'localhost',
+	user: 'fran',
+	password: 'Killua_235',
+	database: 'trivia'	
 });
+
 
 let userModel = {};
 

@@ -12,11 +12,11 @@ var login= yo`
               <h5 class="textLogin1 text-center" style=" line-height: 1.2; padding-bottom: 20px;">Ingresa tus datos y participa</h5>
               <h5 class="textLogin2 text-center" style=" line-height: 1.2; padding-bottom: 20px;">¡Premios sorpresa te esperan!</h5>
           </div> 
-          <div class="columns small-6 small-offset-3  text-center"  style="height:80px; margin-bottom:40px;">  
+          <div class="columns small-9 small-offset-1  text-center"  style="height:80px; margin-bottom:40px;">  
              <input type="text" id="name" class="middle-label" placeholder="Nombre" style="height:100%;">
       
           </div> 
-          <div class="columns small-6 small-offset-3 text-center" style="height:80px;margin-bottom:40px;" >     
+          <div class="columns small-9 small-offset-1 text-center" style="height:80px;margin-bottom:40px;" >     
             
              <input type="text" id="email" class="middle-label" placeholder="Email" style="height:100%;">
           </div> 
