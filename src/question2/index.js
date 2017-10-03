@@ -48,7 +48,6 @@ page('/question2',questionwato, function(ctx,next){
 	
 	}
 
-	$(document).ready(function (){
 		console.log("pregunta:"+ pregunta);
 		$('#q2texto').text(pregunta);
 		$('#q2btn1').text(alt_a);
@@ -59,7 +58,7 @@ page('/question2',questionwato, function(ctx,next){
 	$('#q2btn1').on('click', submitFormQ1);
 	$('#q2btn2').on('click', submitFormQ2);
 	$('#q2btn3').on('click', submitFormQ3);
-});
+
 
 function questionwato (ctx, next) {
     request

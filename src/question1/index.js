@@ -6,11 +6,11 @@ var request = require('superagent');
 
 var id,pregunta, aws, alt_a, alt_b, alt_c ;
 
-page('/question1',questionwato, function(ctx,next){
+page('/question1', function(ctx,next){
 	var main = document.getElementById('main-container');
 	empty(main).appendChild(template);
 	console.log("Question 1");
-
+	questionwato();
 	function submitFormQ1() {
 		console.log("question1");
 		if (aws == '1'){
@@ -80,9 +80,13 @@ page('/question1',questionwato, function(ctx,next){
 	$('#q1btn1').on('click', submitFormQ1);
 	$('#q1btn2').on('click', submitFormQ2);
 	$('#q1btn3').on('click', submitFormQ3);
+
+
+
+
 });
 
-function questionwato (ctx, next) {
+function questionwato()  {
     request
     .get('/q1')
     .end(function (err, res) {
@@ -96,6 +100,6 @@ function questionwato (ctx, next) {
       alt_a = jsonObj[0].alt_a;
       alt_b = jsonObj[0].alt_b;
       alt_c = jsonObj[0].alt_c;
-      next();
+     
     })
 }

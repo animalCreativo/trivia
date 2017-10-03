@@ -13,10 +13,9 @@ page('/winner', function(ctx,next){
 	
 	$(document).ready(function (){
 		setTimeout(function () {
-		    page('/login');
-		}, 200);
+		    page('/');
+		}, 2000);
 	});
 	
 });
-
 

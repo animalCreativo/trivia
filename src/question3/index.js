@@ -7,7 +7,7 @@ var request = require('superagent');
 var id,pregunta, aws, alt_a, alt_b, alt_c ;
 var local_username, local_email;
 
-page('/question3',questionwato, function(ctx,next){
+page('/question3', function(ctx,next){
 	var main = document.getElementById('main-container');
 	empty(main).appendChild(template);
 	console.log("Question 2");

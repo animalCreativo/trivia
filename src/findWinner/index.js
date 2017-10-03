@@ -45,8 +45,8 @@ page('/findWinner',clean, function(ctx,next){
 	$('.imgContain').on("click", "img", function () {
 	    console.log('You Clicked Me');
 		setTimeout(function () {
-			    page('/login');
-			}, 200);
+			    page('/');
+			}, 2000);
 	});
 	
 });
@@ -59,4 +59,3 @@ function clean (ctx, next) {
       next();
   
 }
-
