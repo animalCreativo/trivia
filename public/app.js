@@ -18143,8 +18143,8 @@ page('/findWinner', clean, function (ctx, next) {
 	$('.imgContain').on("click", "img", function () {
 		console.log('You Clicked Me');
 		setTimeout(function () {
-			page('/login');
-		}, 200);
+			page('/');
+		}, 2000);
 	});
 });
 
@@ -18160,9 +18160,7 @@ function clean(ctx, next) {
 
 var _templateObject = _taggedTemplateLiteral(['\n    <div id="todo" class="fondoPrincipal">\n      <div class="row" style="height:100%;">\n        <div class="row align-self-middle" style="margin-top:-400px;"> \n          <div class="columns small-12  text-center imgContain" > \n              <h5 class="textTrivia text-center" style=" line-height: 1.2; padding-bottom: 20px;">TRIVIA</h5>      \n               <img  width="185px" height="240px" src="logo.svg"   /> \n               <h5 class="textWin text-center" style=" line-height: 1.2;padding-top: 50px; padding-bottom: 20px;">\xA1Buscar Ganador!</h5>  \n          </div> \n          <div class="columns small-10 small-offset-1 text-center ">\n              <br>\n              <h5 id="name" class="textWin2 text-center" style=" line-height: 1.2; padding-bottom: 20px;">Nombre.</h5>\n              <h5 id="email" class="textWin2 text-center" style=" line-height: 1.2; padding-bottom: 20px;">Email.</h5>\n\n          </div> \n          <div class="columns small-12 text-center" >   \n                <button id="btnBuscar" type="button" class="buttonBegin button " style="width:40vw;" ><span>Buscar</span></button>  \n          </div>   \n        </div>\n      </div>\n    </div>\n'], ['\n    <div id="todo" class="fondoPrincipal">\n      <div class="row" style="height:100%;">\n        <div class="row align-self-middle" style="margin-top:-400px;"> \n          <div class="columns small-12  text-center imgContain" > \n              <h5 class="textTrivia text-center" style=" line-height: 1.2; padding-bottom: 20px;">TRIVIA</h5>      \n               <img  width="185px" height="240px" src="logo.svg"   /> \n               <h5 class="textWin text-center" style=" line-height: 1.2;padding-top: 50px; padding-bottom: 20px;">\xA1Buscar Ganador!</h5>  \n          </div> \n          <div class="columns small-10 small-offset-1 text-center ">\n              <br>\n              <h5 id="name" class="textWin2 text-center" style=" line-height: 1.2; padding-bottom: 20px;">Nombre.</h5>\n              <h5 id="email" class="textWin2 text-center" style=" line-height: 1.2; padding-bottom: 20px;">Email.</h5>\n\n          </div> \n          <div class="columns small-12 text-center" >   \n                <button id="btnBuscar" type="button" class="buttonBegin button " style="width:40vw;" ><span>Buscar</span></button>  \n          </div>   \n        </div>\n      </div>\n    </div>\n']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 
@@ -18194,7 +18192,7 @@ var template = require('./template');
 var request = require('superagent');
 var virtual = require('virtual-keyboard');
 
-page('/login', function (ctx, next) {
+page('/', cleanHope, function (ctx, next) {
 	var main = document.getElementById('main-container');
 	empty(main).appendChild(template);
 	console.log("login page");
@@ -18217,18 +18215,21 @@ page('/login', function (ctx, next) {
 	$('.imgContain').on("click", "img", function () {
 		setTimeout(function () {
 			page('/findWinner');
-		}, 200);
+		}, 2000);
 	});
 });
+
+function cleanHope(ctx, next) {
+	console.log('clean');
+	next();
+}
 
 },{"./template":30,"empty-element":5,"page":13,"superagent":16,"virtual-keyboard":22,"yo-yo":24}],30:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['\n    <div class="row " style="height: 100%;">\n        <div class="row align-self-middle" style="margin-top:-220px"> \n          <div class="columns small-12  imgContain text-center " >     \n               <img  width="185px" height="240px" src="logo.svg"   /> \n               <h5 class="textTrivia text-center" style=" line-height: 1.2; padding-bottom: 20px;">Trivia</h5>  \n          </div> \n          <div class="columns small-10 small-offset-1 text-center ">\n              <br>\n              <h5 class="textLogin1 text-center" style=" line-height: 1.2; padding-bottom: 20px;">Ingresa tus datos y participa</h5>\n              <h5 class="textLogin2 text-center" style=" line-height: 1.2; padding-bottom: 20px;">\xA1Premios sorpresa te esperan!</h5>\n          </div> \n          <div class="columns small-9 small-offset-1  text-center"  style="height:80px; margin-bottom:40px;">  \n             <input type="text" id="name" class="middle-label" placeholder="Nombre" style="height:100%;">\n      \n          </div> \n          <div class="columns small-9 small-offset-1 text-center" style="height:80px;margin-bottom:40px;" >     \n            \n             <input type="text" id="email" class="middle-label" placeholder="Email" style="height:100%;">\n          </div> \n          <div class="columns small-12 text-center" >   \n                <button id="btnBegin" type="button" class="buttonBegin button " style="width:40vw;" ><span>Comenzar</span></button>  \n          </div>   \n        </div>\n    </div>\n'], ['\n    <div class="row " style="height: 100%;">\n        <div class="row align-self-middle" style="margin-top:-220px"> \n          <div class="columns small-12  imgContain text-center " >     \n               <img  width="185px" height="240px" src="logo.svg"   /> \n               <h5 class="textTrivia text-center" style=" line-height: 1.2; padding-bottom: 20px;">Trivia</h5>  \n          </div> \n          <div class="columns small-10 small-offset-1 text-center ">\n              <br>\n              <h5 class="textLogin1 text-center" style=" line-height: 1.2; padding-bottom: 20px;">Ingresa tus datos y participa</h5>\n              <h5 class="textLogin2 text-center" style=" line-height: 1.2; padding-bottom: 20px;">\xA1Premios sorpresa te esperan!</h5>\n          </div> \n          <div class="columns small-9 small-offset-1  text-center"  style="height:80px; margin-bottom:40px;">  \n             <input type="text" id="name" class="middle-label" placeholder="Nombre" style="height:100%;">\n      \n          </div> \n          <div class="columns small-9 small-offset-1 text-center" style="height:80px;margin-bottom:40px;" >     \n            \n             <input type="text" id="email" class="middle-label" placeholder="Email" style="height:100%;">\n          </div> \n          <div class="columns small-12 text-center" >   \n                <button id="btnBegin" type="button" class="buttonBegin button " style="width:40vw;" ><span>Comenzar</span></button>  \n          </div>   \n        </div>\n    </div>\n']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 
@@ -18254,8 +18255,8 @@ page('/loser', function (ctx, next) {
 
 	$(document).ready(function () {
 		setTimeout(function () {
-			page('/login');
-		}, 200);
+			page('/');
+		}, 2000);
 	});
 });
 
@@ -18264,9 +18265,7 @@ page('/loser', function (ctx, next) {
 
 var _templateObject = _taggedTemplateLiteral(['\n    <div id="todo" class="fondoPrincipal">\n      <div class="row" style="height:100%;">\n        <div class="row align-self-middle" style="margin-top:-400px;"> \n          <div class="columns small-12  text-center" > \n              <h5 class="textTrivia text-center" style=" line-height: 1.2; padding-bottom: 20px;">TRIVIA</h5>      \n               <img  width="185px" height="240px" src="logo.svg" style="margin-left: -40px;"  /> \n               <h5 class="textLoser text-center" style=" line-height: 1.2; padding-bottom: 20px;">Has perdido</h5>  \n          </div> \n          <div class="columns small-10 small-offset-1 text-center ">\n              <br>\n              <h5 class="textLoser2 text-center" style=" line-height: 1.2; padding-bottom: 20px;">Gracias por participar.</h5>\n              <h5 class="textLoser2 text-center" style=" line-height: 1.2; padding-bottom: 20px;">Contin\xFAa disfrutando de<br>"El arte de la cocina"<br>junto a Ilko.</h5>\n          </div>   \n        </div>\n      </div>\n    </div>\n'], ['\n    <div id="todo" class="fondoPrincipal">\n      <div class="row" style="height:100%;">\n        <div class="row align-self-middle" style="margin-top:-400px;"> \n          <div class="columns small-12  text-center" > \n              <h5 class="textTrivia text-center" style=" line-height: 1.2; padding-bottom: 20px;">TRIVIA</h5>      \n               <img  width="185px" height="240px" src="logo.svg" style="margin-left: -40px;"  /> \n               <h5 class="textLoser text-center" style=" line-height: 1.2; padding-bottom: 20px;">Has perdido</h5>  \n          </div> \n          <div class="columns small-10 small-offset-1 text-center ">\n              <br>\n              <h5 class="textLoser2 text-center" style=" line-height: 1.2; padding-bottom: 20px;">Gracias por participar.</h5>\n              <h5 class="textLoser2 text-center" style=" line-height: 1.2; padding-bottom: 20px;">Contin\xFAa disfrutando de<br>\\"El arte de la cocina\\"<br>junto a Ilko.</h5>\n          </div>   \n        </div>\n      </div>\n    </div>\n']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 
@@ -18285,11 +18284,11 @@ var request = require('superagent');
 
 var id, pregunta, aws, alt_a, alt_b, alt_c;
 
-page('/question1', questionwato, function (ctx, next) {
+page('/question1', function (ctx, next) {
 	var main = document.getElementById('main-container');
 	empty(main).appendChild(template);
 	console.log("Question 1");
-
+	questionwato();
 	function submitFormQ1() {
 		console.log("question1");
 		if (aws == '1') {
@@ -18356,32 +18355,29 @@ page('/question1', questionwato, function (ctx, next) {
 	$('#q1btn1').on('click', submitFormQ1);
 	$('#q1btn2').on('click', submitFormQ2);
 	$('#q1btn3').on('click', submitFormQ3);
-});
 
-function questionwato(ctx, next) {
-	request.get('/q1').end(function (err, res) {
-		if (err) return console.log(err);
-		var json = JSON.stringify(res.body);
-		var jsonObj = jQuery.parseJSON(json);
-		console.log("datos server2:" + json);
-		id = jsonObj[0].id;
-		pregunta = jsonObj[0].pregunta;
-		aws = jsonObj[0].aws;
-		alt_a = jsonObj[0].alt_a;
-		alt_b = jsonObj[0].alt_b;
-		alt_c = jsonObj[0].alt_c;
-		next();
-	});
-}
+	function questionwato() {
+		request.get('/q1').end(function (err, res) {
+			if (err) return console.log(err);
+			var json = JSON.stringify(res.body);
+			var jsonObj = jQuery.parseJSON(json);
+			console.log("datos server2:" + json);
+			id = jsonObj[0].id;
+			pregunta = jsonObj[0].pregunta;
+			aws = jsonObj[0].aws;
+			alt_a = jsonObj[0].alt_a;
+			alt_b = jsonObj[0].alt_b;
+			alt_c = jsonObj[0].alt_c;
+		});
+	}
+});
 
 },{"./template":34,"empty-element":5,"page":13,"superagent":16,"yo-yo":24}],34:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['\n      <div class="row " style="height: 100%;">\n        <div class="row align-self-middle" > \n          <div class="columns small-10 small-offset-1 text-center ">\n              <br>\n              <h5 id="q1texto" class="textSpecial text-center" style=" line-height: 1.2; padding-bottom: 20px;">\xBFCual de estos ingrediente es de origen mapuche?</h5>\n          </div> \n          <div class="columns small-8  small-offset-3" >  \n               <button type="button" class="button buttonQ1" id="q1btn1"><span>A</span>Alt1</button>\n               <img  id="q1img1" width="auto" height="auto" src="item11.png" style="margin-left: -20px;" /> \n          </div> \n          <div class="columns small-8  small-offset-3" >     \n               <button type="button" class=" button buttonQ1" id="q1btn2"><span>B</span>Alt2</button>\n               <img  id="q1img2" width="auto" height="auto" src="item12.png" style="margin-left: -40px;"  />   \n          </div> \n          <div class="columns small-8  small-offset-3" >   \n                <button type="button" class="button buttonQ1" id="q1btn3"><span>C</span>Alt3</button>\n               <img  id="q1img3" width="auto" height="auto" src="item13.png" style="margin-left: -50px;" />  \n          </div>   \n        </div>\n      </div>\n'], ['\n      <div class="row " style="height: 100%;">\n        <div class="row align-self-middle" > \n          <div class="columns small-10 small-offset-1 text-center ">\n              <br>\n              <h5 id="q1texto" class="textSpecial text-center" style=" line-height: 1.2; padding-bottom: 20px;">\xBFCual de estos ingrediente es de origen mapuche?</h5>\n          </div> \n          <div class="columns small-8  small-offset-3" >  \n               <button type="button" class="button buttonQ1" id="q1btn1"><span>A</span>Alt1</button>\n               <img  id="q1img1" width="auto" height="auto" src="item11.png" style="margin-left: -20px;" /> \n          </div> \n          <div class="columns small-8  small-offset-3" >     \n               <button type="button" class=" button buttonQ1" id="q1btn2"><span>B</span>Alt2</button>\n               <img  id="q1img2" width="auto" height="auto" src="item12.png" style="margin-left: -40px;"  />   \n          </div> \n          <div class="columns small-8  small-offset-3" >   \n                <button type="button" class="button buttonQ1" id="q1btn3"><span>C</span>Alt3</button>\n               <img  id="q1img3" width="auto" height="auto" src="item13.png" style="margin-left: -50px;" />  \n          </div>   \n        </div>\n      </div>\n']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 
@@ -18439,17 +18435,15 @@ page('/question2', questionwato, function (ctx, next) {
 		page('/question3');
 	}
 
-	$(document).ready(function () {
-		console.log("pregunta:" + pregunta);
-		$('#q2texto').text(pregunta);
-		$('#q2btn1').text(alt_a);
-		$('#q2btn2').text(alt_b);
-		$('#q2btn3').text(alt_c);
-	});
-	$('#q2btn1').on('click', submitFormQ1);
-	$('#q2btn2').on('click', submitFormQ2);
-	$('#q2btn3').on('click', submitFormQ3);
+	console.log("pregunta:" + pregunta);
+	$('#q2texto').text(pregunta);
+	$('#q2btn1').text(alt_a);
+	$('#q2btn2').text(alt_b);
+	$('#q2btn3').text(alt_c);
 });
+$('#q2btn1').on('click', submitFormQ1);
+$('#q2btn2').on('click', submitFormQ2);
+$('#q2btn3').on('click', submitFormQ3);
 
 function questionwato(ctx, next) {
 	request.get('/q2').end(function (err, res) {
@@ -18472,9 +18466,7 @@ function questionwato(ctx, next) {
 
 var _templateObject = _taggedTemplateLiteral(['\n     <div class="row " style="height: 100%;">\n        <div class="row align-self-middle" > \n          <div class="columns small-10 small-offset-1 text-center ">\n              <br>\n              <h5 id="q2texto" class="textSpecial text-center" style=" line-height: 1.2; padding-bottom: 20px;">\xBFCual de estos ingrediente es de origen mapuche?</h5>\n          </div> \n          <div class="columns small-12  text-center" style="padding-top:50px;">  \n               <button type="button" id="q2btn1" class="button buttonTrue buttonHope" style="width:40vw;" ><span>A</span>Alt1</button>\n          </div> \n          <div class="columns small-12  text-center"  style="padding-top:50px;">     \n               <button type="button" id="q2btn2" class=" button buttonTrue buttonHope" style="width:40vw;" ><span>B</span>Alt2</button>\n          </div> \n          <div class="columns small-12  text-center" style="padding-top:50px;">   \n                <button type="button" id="q2btn3" class="button buttonTrue buttonHope" style="width:40vw;" ><span>C</span>Alt3</button> \n          </div>   \n        </div>\n      </div>\n'], ['\n     <div class="row " style="height: 100%;">\n        <div class="row align-self-middle" > \n          <div class="columns small-10 small-offset-1 text-center ">\n              <br>\n              <h5 id="q2texto" class="textSpecial text-center" style=" line-height: 1.2; padding-bottom: 20px;">\xBFCual de estos ingrediente es de origen mapuche?</h5>\n          </div> \n          <div class="columns small-12  text-center" style="padding-top:50px;">  \n               <button type="button" id="q2btn1" class="button buttonTrue buttonHope" style="width:40vw;" ><span>A</span>Alt1</button>\n          </div> \n          <div class="columns small-12  text-center"  style="padding-top:50px;">     \n               <button type="button" id="q2btn2" class=" button buttonTrue buttonHope" style="width:40vw;" ><span>B</span>Alt2</button>\n          </div> \n          <div class="columns small-12  text-center" style="padding-top:50px;">   \n                <button type="button" id="q2btn3" class="button buttonTrue buttonHope" style="width:40vw;" ><span>C</span>Alt3</button> \n          </div>   \n        </div>\n      </div>\n']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 
@@ -18494,7 +18486,7 @@ var request = require('superagent');
 var id, pregunta, aws, alt_a, alt_b, alt_c;
 var local_username, local_email;
 
-page('/question3', questionwato, function (ctx, next) {
+page('/question3', function (ctx, next) {
 	var main = document.getElementById('main-container');
 	empty(main).appendChild(template);
 	console.log("Question 2");
@@ -18583,9 +18575,7 @@ function saveUserLoser(ctx, next) {
 
 var _templateObject = _taggedTemplateLiteral(['\n    <div class="row " style="height: 100%;">\n        <div class="row align-self-middle" > \n          <div class="columns small-10 small-offset-1 text-center ">\n              <br>\n              <h5 id="q3texto" class="textSpecial text-center" style=" line-height: 1.2; padding-bottom: 20px;">\xBFCual de estos ingrediente es de origen mapuche?</h5>\n          </div> \n          <div class="columns small-12 text-center"   style="padding-top:50px;" >  \n               <button id="q3btn1" type="button" class="button buttonTrue" style="width:40vw;" ><span>Verdadero</span></button>\n          </div> \n          <div class="columns small-12 text-center"   style="padding-top:50px;" >     \n               <button id="q3btn2" type="button" class=" button buttonTrue" style="width:40vw;" ><span>Falso</span></button>\n          </div> \n       \n      </div>\n'], ['\n    <div class="row " style="height: 100%;">\n        <div class="row align-self-middle" > \n          <div class="columns small-10 small-offset-1 text-center ">\n              <br>\n              <h5 id="q3texto" class="textSpecial text-center" style=" line-height: 1.2; padding-bottom: 20px;">\xBFCual de estos ingrediente es de origen mapuche?</h5>\n          </div> \n          <div class="columns small-12 text-center"   style="padding-top:50px;" >  \n               <button id="q3btn1" type="button" class="button buttonTrue" style="width:40vw;" ><span>Verdadero</span></button>\n          </div> \n          <div class="columns small-12 text-center"   style="padding-top:50px;" >     \n               <button id="q3btn2" type="button" class=" button buttonTrue" style="width:40vw;" ><span>Falso</span></button>\n          </div> \n       \n      </div>\n']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 
@@ -18611,8 +18601,8 @@ page('/winner', function (ctx, next) {
 
 	$(document).ready(function () {
 		setTimeout(function () {
-			page('/login');
-		}, 200);
+			page('/');
+		}, 2000);
 	});
 });
 
@@ -18621,9 +18611,7 @@ page('/winner', function (ctx, next) {
 
 var _templateObject = _taggedTemplateLiteral(['\n    <div id="todo" class="fondoPrincipal">\n      <div class="row" style="height:100%;">\n        <div class="row align-self-middle" style="margin-top:-400px;"> \n          <div class="columns small-12  text-center" > \n              <h5 class="textTrivia text-center" style=" line-height: 1.2; padding-bottom: 20px;">TRIVIA</h5>      \n               <img  width="185px" height="240px" src="logo.svg" style="margin-left: -40px;"  /> \n               <h5 class="textWin text-center" style=" line-height: 1.2; padding-bottom: 20px;">\xA1FELICIDADES!</h5>  \n          </div> \n          <div class="columns small-10 small-offset-1 text-center ">\n              <br>\n              <h5 class="textWin2 text-center" style=" line-height: 1.2; padding-bottom: 20px;">Haz respondido<br>correctamente la mayoria<br>de las preguntas.</h5>\n              <h5 class="textWin2 text-center" style=" line-height: 1.2; padding-bottom: 20px;">\xA1En breve sabr\xE1s si eres uno<br>de los ganadores!</h5>\n          </div>   \n        </div>\n      </div>\n    </div>\n'], ['\n    <div id="todo" class="fondoPrincipal">\n      <div class="row" style="height:100%;">\n        <div class="row align-self-middle" style="margin-top:-400px;"> \n          <div class="columns small-12  text-center" > \n              <h5 class="textTrivia text-center" style=" line-height: 1.2; padding-bottom: 20px;">TRIVIA</h5>      \n               <img  width="185px" height="240px" src="logo.svg" style="margin-left: -40px;"  /> \n               <h5 class="textWin text-center" style=" line-height: 1.2; padding-bottom: 20px;">\xA1FELICIDADES!</h5>  \n          </div> \n          <div class="columns small-10 small-offset-1 text-center ">\n              <br>\n              <h5 class="textWin2 text-center" style=" line-height: 1.2; padding-bottom: 20px;">Haz respondido<br>correctamente la mayoria<br>de las preguntas.</h5>\n              <h5 class="textWin2 text-center" style=" line-height: 1.2; padding-bottom: 20px;">\xA1En breve sabr\xE1s si eres uno<br>de los ganadores!</h5>\n          </div>   \n        </div>\n      </div>\n    </div>\n']);
 
-function _taggedTemplateLiteral(strings, raw) {
-  return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } }));
-}
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 
